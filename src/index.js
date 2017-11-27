@@ -25,7 +25,7 @@ function config($stateProvider, $httpProvider,
       component: 'todo',
       resolve: {
         filter: function () {
-          return 'all'
+          return 'all';
         }
       }
     })
@@ -34,7 +34,7 @@ function config($stateProvider, $httpProvider,
       component: 'todo',
       resolve: {
         filter: function () {
-          return 'active'
+          return 'active';
         }
       }
     })
@@ -43,7 +43,7 @@ function config($stateProvider, $httpProvider,
       component: 'todo',
       resolve: {
         filter: function () {
-          return 'completed'
+          return 'completed';
         }
       }
     });

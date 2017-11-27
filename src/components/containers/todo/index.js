@@ -19,6 +19,13 @@ function todoContainerController(todoStore, $state) {
     console.log(JSON.stringify(mobx.toJS(todoList), null, 2));
   });
 
+  self.$onChanges = function $onChanges(changes) {
+    if (changes.filter) {
+      self.filter = changes.filter.currentValue;
+      self.todoList = getListBasedOnFilter(self.todoList, self.filter);
+    }
+  };
+
   self.$onDestroy = function $onDestroy() {
     dispose();
   };
