@@ -41,5 +41,6 @@ module.exports = {
       { from: 'index.html' }
     ]),
     new CleanWebpackPlugin(['dist'])
-  ]
+  ],
+  devtool: 'source-map'
 };
